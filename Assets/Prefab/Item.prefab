@@ -118,6 +118,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c7e0503071f854cb0248ffaa30a4db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootItem:
-  - {fileID: 231794290302138816, guid: bcc78e69f57f9994193b537ebe8664be, type: 3}
-  - {fileID: 231794290302138816, guid: e0078cec93ec29742a247330be3ea5e3, type: 3}
+  shootItem: {fileID: 231794290302138816, guid: bcc78e69f57f9994193b537ebe8664be,
+    type: 3}
