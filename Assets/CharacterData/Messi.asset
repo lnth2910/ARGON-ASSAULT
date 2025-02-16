@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04244c2ce7263c74c9b5c55b6fdcc6a8, type: 3}
   m_Name: Messi
   m_EditorClassIdentifier: 
-  characterName: Messi
-  health: 120
-  attackPower: 100
+  characterName: 102TC DORAPR
+  speed: 70
+  attack: 70
+  defense: 90
+  energy: 80

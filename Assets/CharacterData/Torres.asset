@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04244c2ce7263c74c9b5c55b6fdcc6a8, type: 3}
   m_Name: Torres
   m_EditorClassIdentifier: 
-  characterName: Torres
-  health: 70
-  attackPower: 100
+  characterName: 500H VISMAK
+  speed: 60
+  attack: 70
+  defense: 85
+  energy: 100

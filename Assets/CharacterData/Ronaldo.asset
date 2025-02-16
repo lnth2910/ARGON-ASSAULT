@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04244c2ce7263c74c9b5c55b6fdcc6a8, type: 3}
   m_Name: Ronaldo
   m_EditorClassIdentifier: 
-  characterName: Ronaldo
-  health: 70
-  attackPower: 100
+  characterName: 11CBA OPLANE
+  speed: 100
+  attack: 100
+  defense: 80
+  energy: 70
