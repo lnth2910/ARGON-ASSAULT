@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemBuilder : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject[] shootItem;
+    public GameObject shootItem;
     void Start()
     {
         

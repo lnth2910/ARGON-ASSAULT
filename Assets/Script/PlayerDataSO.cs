@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerDataSO : ScriptableObject
 {
     public string characterName;
-    public int health;
-    public int attackPower;
+    public float speed;
+    public float attack;
+    public float defense;
+    public float energy;
 }

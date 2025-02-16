@@ -89,6 +89,14 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
+    private void ProcessUltimate()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Active Ultimate");
+        }
+    }
+
     private void SetLaserActive(bool isActive)
     {
         //foreach(GameObject laser in lasers)
@@ -98,15 +106,15 @@ public class PlayerControls : MonoBehaviour
         //}
         if (isActive == true)
         {
-            
-            PlayVfx(effectSelector.effectLaser1);
-            PlayVfx(effectSelector.effectLaser2);
-            Debug.Log(effectSelector.effectLaser1.GetType());
+            PlayVfx(effectSelector.laserRight);
+            PlayVfx(effectSelector.laserLeft);
+            Debug.Log("Dang ban chiu chiu chiu");
         }
         else
         {
-            StopVfx(effectSelector.effectLaser1);
-            StopVfx(effectSelector.effectLaser2);   
+            StopVfx(effectSelector.laserRight);
+            StopVfx(effectSelector.laserLeft);
+            Debug.Log("Khong ban chiu chiu chiu");
         }
         
         
@@ -123,7 +131,6 @@ public class PlayerControls : MonoBehaviour
             foreach (var par in allParticle)
             {
                 par.Play();
-                Debug.Log(par.name + par.GetType());
             }
         }
     }

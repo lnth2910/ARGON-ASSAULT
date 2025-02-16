@@ -7,11 +7,14 @@ using TMPro;
 public class PlayerSelector : MonoBehaviour
 {
     public List<GameObject> playerPrefabs; // Danh sách các prefab của nhân vật
+    public List<GameObject> playerUltimate; //Danh sach cac ulti cua nhan vat
     private GameObject currentPlayer;
     [SerializeField] private GameObject playTimeline;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private GameObject guiManager;
     public List<PlayerDataSO> playerData;
+    public PlayerIndicator playerIndicator;
+    public EffectSelector ultiItem;
     private int playerIndex = 0;
 
     [SerializeField] private PlayerControls playerControls;
@@ -20,6 +23,13 @@ public class PlayerSelector : MonoBehaviour
     public TMP_Text health;
     public TMP_Text attackPower;
     // Start is called before the first frame update
+
+    public void SelecUltimate(int ultiIndex)
+    {
+        ultiItem = currentPlayer.GetComponent<EffectSelector>();
+        ultiItem.ultimateLaser = playerUltimate[ultiIndex];
+        Debug.Log("op" + ultiIndex);
+    }
 
     public void NextPlayer()
     {
@@ -46,8 +56,10 @@ public class PlayerSelector : MonoBehaviour
     public void DisplayPlayerData()
     {
         playerName.text = playerData[playerIndex].characterName;
-        health.text = playerData[playerIndex].health.ToString();
-        attackPower.text = playerData[playerIndex].attackPower.ToString();
+        playerIndicator.UpdateSpeedIndicator((playerData[playerIndex].speed) / 100);
+        playerIndicator.UpdateAttackIndicator((playerData[playerIndex].attack) / 100);
+        playerIndicator.UpdateDefenseIndicator((playerData[playerIndex].defense) / 100);
+        playerIndicator.UpdateEnergyIndicator((playerData[playerIndex].defense) / 100);
     }
 
     public void SpawnPlayer()
@@ -76,6 +88,6 @@ public class PlayerSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        DisplayPlayerData();
     }
 }
